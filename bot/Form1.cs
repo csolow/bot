@@ -34,7 +34,7 @@ namespace bot
 
 
             list.Add(new String[] {"Hello", "how are you", "what time is it", "what is today", "open google", "thanks", "wake", "sleep", "restart", "update", "open hearts of iron 4", "what's the weather like", "what's the temperature",
-                "what is lowest point today", "what is higest point today", "minimize", "maximize", "play", "pause", "spotify", "next", "last" });
+                "what is lowest point today", "what is higest point today", "minimize", "maximize", "play", "pause", "spotify", "next", "last", "test" });
 
             Grammar gr = new Grammar(new GrammarBuilder(list));
 
@@ -178,6 +178,11 @@ namespace bot
                 if (r == "what is today")
                 {
                     say(DateTime.Now.ToString("d/M/yyyy"));
+                }
+
+                if (r == "test")
+                {
+                    say("1,2,3 1,2,3");
                 }
 
                 if (r == "Hello")
