@@ -1,0 +1,9 @@
+C:\Users\cswag\source\repos\bot\bot\obj\Debug\bot.csprojResolveAssemblyReference.cache
+C:\Users\cswag\source\repos\bot\bot\obj\Debug\bot.Form1.resources
+C:\Users\cswag\source\repos\bot\bot\obj\Debug\bot.Properties.Resources.resources
+C:\Users\cswag\source\repos\bot\bot\obj\Debug\bot.csproj.GenerateResource.Cache
+C:\Users\cswag\source\repos\bot\bot\obj\Debug\bot.csproj.CoreCompileInputs.cache
+C:\Users\cswag\source\repos\bot\bot\bin\Debug\bot.exe
+C:\Users\cswag\source\repos\bot\bot\bin\Debug\bot.pdb
+C:\Users\cswag\source\repos\bot\bot\obj\Debug\bot.exe
+C:\Users\cswag\source\repos\bot\bot\obj\Debug\bot.pdb
