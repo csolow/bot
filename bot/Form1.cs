@@ -242,7 +242,7 @@ namespace bot
 
                 if (r == "thanks")
                 {
-                    say("you're welcome");
+                    say("you're welcome.");
                 }
             }
             textBox1.AppendText(r + "\n");
