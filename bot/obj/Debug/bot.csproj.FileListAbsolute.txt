@@ -16,3 +16,12 @@ C:\Users\cswag\source\repos\bot-git\bot\obj\Debug\bot.csproj.GenerateResource.Ca
 C:\Users\cswag\source\repos\bot-git\bot\obj\Debug\bot.csproj.CoreCompileInputs.cache
 C:\Users\cswag\source\repos\bot-git\bot\obj\Debug\bot.exe
 C:\Users\cswag\source\repos\bot-git\bot\obj\Debug\bot.pdb
+C:\sln\bot\bin\Debug\bot.exe
+C:\sln\bot\bin\Debug\bot.pdb
+C:\sln\bot\obj\Debug\bot.csprojResolveAssemblyReference.cache
+C:\sln\bot\obj\Debug\bot.Form1.resources
+C:\sln\bot\obj\Debug\bot.Properties.Resources.resources
+C:\sln\bot\obj\Debug\bot.csproj.GenerateResource.Cache
+C:\sln\bot\obj\Debug\bot.csproj.CoreCompileInputs.cache
+C:\sln\bot\obj\Debug\bot.exe
+C:\sln\bot\obj\Debug\bot.pdb

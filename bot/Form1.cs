@@ -34,7 +34,7 @@ namespace bot
 
 
             list.Add(new String[] {"Hello", "how are you", "what time is it", "what is today", "open google", "thanks", "wake", "sleep", "restart", "update", "open hearts of iron 4", "what's the weather like", "what's the temperature",
-                "what is lowest point today", "what is higest point today", "minimize", "maximize", "play", "pause", "spotify", "next", "last", "test" });
+                "what is the lowest point today", "what is the higest point today", "minimize", "maximize", "play", "pause", "spotify", "next", "last", "test" });
 
             Grammar gr = new Grammar(new GrammarBuilder(list));
 
@@ -78,10 +78,13 @@ namespace bot
             try
             {
                 int rawtemp = int.Parse(channel.SelectSingleNode("item").SelectSingleNode("yweather:condition", manager).Attributes["temp"].Value);
-                temp = (rawtemp - 32) * 5/9 + "";
-                condition = channel.SelectSingleNode("item").SelectSingleNode("yweather:condition", manager).Attributes["text"].Value;
-                high = channel.SelectSingleNode("item").SelectSingleNode("yweather:forecast", manager).Attributes["high"].Value;
-                low = channel.SelectSingleNode("item").SelectSingleNode("yweather:forecast", manager).Attributes["low"].Value;
+                int con = int.Parse(channel.SelectSingleNode("item").SelectSingleNode("yweather:condition", manager).Attributes["text"].Value);
+                int warm = int.Parse(channel.SelectSingleNode("item").SelectSingleNode("yweather:forecast", manager).Attributes["high"].Value);
+                int cold = int.Parse(channel.SelectSingleNode("item").SelectSingleNode("yweather:forecast", manager).Attributes["low"].Value);
+                temp = (rawtemp - 32) * 5 / 9 + "";
+                condition = (con - 32) * 5 / 9 + "";
+                high = (warm - 32) * 5 / 9 + "";
+                low = (cold - 32) * 5 / 9 + "";
                 if (input == "temp")
                 {
                     return temp; 
@@ -151,7 +154,7 @@ namespace bot
 
                 if (r == "spotify")
                 {
-                    Process.Start(@"C:\Users\cswag\Desktop\Spotify");
+                    Process.Start(@"C:\Users\cswag\Desktop\Spotify.exe");
                     say("somebody once told me the world was gonna roll me i aint the sharpest tool in the shed, she was looking kind of dumb with her finger and her thumb in the shape of an L on her forehead");
                 }
 
@@ -200,12 +203,12 @@ namespace bot
                     say("it is " + GetWeather("temp") + "degrees");
                 }
 
-                if (r == "what is higest point today")
+                if (r == "what is the higest point today")
                 {
                     say("the higest point today is " + GetWeather("high") + "degrees");
                 }
 
-                if (r == "what is lowest point today")
+                if (r == "what is the lowest point today")
                 {
                     say("the lowest point today is " + GetWeather("low") + "degrees");
                 }
