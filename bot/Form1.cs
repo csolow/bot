@@ -33,8 +33,7 @@ namespace bot
             SpeechRecognitionEngine rec = new SpeechRecognitionEngine();
 
 
-            list.Add(new String[] {"Hello", "how are you", "what time is it", "what is today", "open google", "thanks", "wake", "sleep", "restart", "update", "open hearts of iron 4", "what's the weather like", "what's the temperature",
-                "what is the lowest point today", "what is the higest point today", "minimize", "maximize", "play", "pause", "spotify", "next", "last", "test" });
+            list.Add(new String[] {"Hello", "how are you", "arduino on", "arduino off", "what time is it", "what is today", "open google", "thanks", "wake", "sleep", "restart", "update", "open hearts of iron 4", "what's the weather like", "what's the temperature", "what is the lowest point today", "what is the higest point today", "tell me a joke", "minimize", "maximize", "play", "pause", "spotify", "next", "last", "test" });
 
             Grammar gr = new Grammar(new GrammarBuilder(list));
 
@@ -50,9 +49,9 @@ namespace bot
             }
             catch { return; }
 
-            s.SelectVoiceByHints(VoiceGender.Female);
+            s.SelectVoiceByHints(VoiceGender.Neutral);
 
-            s.Speak("hello, my name is nanna");
+            s.Speak("hello, my name is Nanna");
 
             InitializeComponent();
         }
@@ -183,9 +182,28 @@ namespace bot
                     say(DateTime.Now.ToString("d/M/yyyy"));
                 }
 
+                if (r == "tell me a joke")
+                {
+                    say("No, im a piece of software.");
+                }
+
                 if (r == "test")
                 {
                     say("1,2,3 1,2,3");
+                }
+
+                if (r == "arduino on")
+                {
+                    port.Open();
+                    port.WriteLine("A");
+                    port.Close();
+                }
+
+                if (r == "arduino off")
+                {
+                    port.Open();
+                    port.WriteLine("B");
+                    port.Close();
                 }
 
                 if (r == "Hello")
